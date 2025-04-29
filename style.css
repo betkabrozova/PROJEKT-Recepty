@@ -33,3 +33,84 @@ Nastav je receptům jako obrázky na pozadí (tj. nepřidávej je jako <img> do 
 Na rozložení prvků NEPOUŽÍVEJ absolutní pozicování, ale pouze flexboxy.
 Flexboxy mohou být vnořené do sebe, klidně několikrát.
 */
+*{
+	color: white;
+}
+
+.kontejner{
+	display: flex;
+	flex-direction: column;
+}
+
+.male{
+	display: flex;
+	flex-direction: column;
+}
+.recept{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: start;
+	min-height: 80px;
+	padding: 5px;
+	border-bottom: solid white 0.5px;
+}
+.hlavni{
+	background-image: url(images/salat.jpg);
+	background-size: cover;
+	min-height: 200px;
+}
+.prvni{
+	background-image: url(images/chlebicek.jpg);
+	background-size: cover;
+}
+.druhy{
+	background-image: url(images/cizrna.jpg);
+	background-size: cover;
+}
+.treti{
+	background-image: url(images/tacos.jpg);
+	background-size: cover;
+}
+.ctvrty{
+	background-image: url(images/burger.jpg);
+	background-size: cover;
+}
+p{
+	font-size: 14px;
+	margin: 0;
+}
+h2{
+	font-weight: 800;
+	font-size: 18px;
+	margin: 0;
+}
+.hlavni h2{
+	font-size: 28px;
+}
+
+@media screen and (min-width: 480px) {
+	.male{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.male .recept{
+		flex-basis: calc((100% - 1px) / 2);
+		min-height: 150px;
+	}
+	.prvni, .treti{
+		border-right:solid white 0.5px ;
+	}
+	.hlavni{
+		min-height: 250px;
+	}
+
+
+
+
+}
+@media screen and (min-width: 860px) {
+	
+}
+
