@@ -52,7 +52,7 @@ Flexboxy mohou být vnořené do sebe, klidně několikrát.
 	justify-content: space-between;
 	text-align: start;
 	min-height: 80px;
-	padding: 5px;
+	padding: 10px;
 	border-bottom: solid white 0.5px;
 }
 .hlavni{
@@ -111,6 +111,28 @@ h2{
 
 }
 @media screen and (min-width: 860px) {
-	
-}
+	.kontejner{
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+	}
+	.male .recept{
+		flex-basis: calc((100% - 1px) / 2);
+		min-height: 200px;
+		flex-grow: 1;
+	}
+	.hlavni{
+		min-height: 400px;
+		flex-grow: 1;
+	}
+	.recept{
+		padding: 20px;
+		border-bottom: solid white 0.5px;
+	}
+	h2{
+		font-size: 28px;
+	}
+	.hlavni h2{
+		font-size: 48px;
+	}
 
